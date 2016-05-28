@@ -103,9 +103,11 @@ def serve_zip(entry_id, slug):
     """Respond with a zip for a directory"""
     path = path_from_id(entry_id)
     name = os.path.basename(path)
+    slug = slugify(name)
+    # Not using path_slug because a user could easily hijack it
     zf = zip_dir(path)
     r = Response(zf, mimetype="application/zip")
-    r.headers["Content-Disposition"] = "attachment; filename={}.zip".format(name)
+    r.headers["Content-Disposition"] = "attachment; filename={}.zip".format(slug)
     return r
 
 
