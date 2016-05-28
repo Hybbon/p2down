@@ -102,9 +102,10 @@ def zip_dir(addr):
 def serve_zip(entry_id, slug):
     """Respond with a zip for a directory"""
     path = path_from_id(entry_id)
+    name = os.path.basename(path)
     zf = zip_dir(path)
     r = Response(zf, mimetype="application/zip")
-    r.headers["Content-Disposition"] = "attachment; filename=download.zip"
+    r.headers["Content-Disposition"] = "attachment; filename={}.zip".format(name)
     return r
 
 
