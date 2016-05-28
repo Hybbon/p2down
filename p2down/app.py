@@ -28,7 +28,7 @@ CONFIG_ENVVAR = "P2DOWN_SETTINGS"  # Set this envvar to the path to your cfg
 
 app = Flask(__name__)
 app.config.from_object(BaseConfig)
-app.config.from_envvar(CONFIG_ENVVAR)
+app.config.from_envvar(CONFIG_ENVVAR, silent=True)
 # The debug config is loaded at the end of this file, if it is run
 # directly (name == main)
 
