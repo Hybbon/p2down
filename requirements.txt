@@ -1,0 +1,15 @@
+awesome-slugify==1.6.5
+Babel==2.3.4
+Flask==0.10.1
+Flask-Assets==0.11
+gunicorn==19.6.0
+itsdangerous==0.24
+Jinja2==2.8
+MarkupSafe==0.23
+pytz==2016.4
+redis==2.10.5
+regex==2016.5.23
+Unidecode==0.4.19
+webassets==0.11.1
+Werkzeug==0.11.10
+zipstream==1.1.4

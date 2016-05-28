@@ -1,0 +1,28 @@
+<!doctype html>
+<head>
+    <title>.down</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700%27)">
+    {% assets "style" %}
+    <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}">
+    {% endassets %}
+</head>
+<body>
+    <div id="wrapper">
+        <h1>.down</h1>
+        <p>Now with zip direct download support!</p>
+        {% if entries %}
+        <div class="index-container">
+            <ul class="index">
+                {% for entry in entries %}
+                <li><a href="{{ url_for('serve_zip', entry_id=entry.id, slug=entry.slug)  }}">{{ entry.name }}</a>, {{ entry.delta_ago }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        <footer>
+            <p>
+            .down © 1503 - 409 B.C. dotbdo.
+            </p>
+        </footer>
+    </div>
+</body>

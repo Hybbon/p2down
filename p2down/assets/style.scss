@@ -1,0 +1,40 @@
+$background-color: #333333;
+$text-color: #CCCCCC;
+$link-color: #00B7FF;
+
+html {
+    font-size: 10px;
+}
+
+body {
+    padding: 50px;
+    font: 1.6em "Inconsolata", "Monaco", "Courier New", monospace;
+    color: $text-color;
+    background-color: $background-color;
+}
+
+a {
+    color: $link-color;
+}
+
+.index-container {
+    h2 {
+        font-size: 100%;
+        text-transform: uppercase;
+    }
+    ul.index {
+        list-style-type: none;
+        list-style-position: inside;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.dl-button {
+    color: $link-color;
+    text-decoration: underline;
+    cursor: copy;
+    &:active {
+        color: $text-color;
+    }
+}
