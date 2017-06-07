@@ -40,7 +40,7 @@ env.load_path = [
     os.path.join(os.path.dirname(__file__), "assets")
 ]
 style = assets.Bundle(
-    "style.scss", filters="scss", output="style.css"
+    "style.css"
 )
 env.register("style", style)
 
